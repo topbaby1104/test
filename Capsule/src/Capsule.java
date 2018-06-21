@@ -5,3 +5,8 @@ public class Capsule {
 		System.out.println(taro.getName());
 
 }}
+
+
+
+wwwww
+ß

@@ -12,23 +12,24 @@ public class MyPageDAO {
 
 	private DBConnector dbConnector = new DBConnector();
 	private Connection connection = dbConnector.getConnection();
+
 	public ArrayList<MyPageDTO> getMyPageUserInfo
-		(String item_transaction_id,String user_master_id)throws SQLException{
+	(String item_transaction_id,String user_master_id)throws SQLException{
 		ArrayList<MyPageDTO> myPageDTO = new ArrayList<MyPageDTO>();
 		String sql=
 				"SELECT
-				 ubit.id,iit.item_name,ubit.total_price,ubit.total_count,
-					ubit.pay,ubit.insert_date
+				 		ubit.id,iit.item_name,ubit.total_price,ubit.total_count,
+				 		ubit.pay,ubit.insert_date
 				FROM
-					user_buy_item_transaction ubit
+						user_buy_item_transaction ubit
 				LEFT JOIN
-					item_info_transaction iit
+						item_info_transaction iit
 				ON
-					ubit.item_transaction_id=iit.id
+						ubit.item_transaction_id=iit.id
 				WHERE
-					ubit.item_transaction_id = ?AND ubit.user_master_id =?
+						ubit.item_transaction_id = ?AND ubit.user_master_id =?
 				ORDER BY
-					insert_date DESC";
+						insert_date DESC" ;
 
 
 
@@ -64,7 +65,7 @@ public class MyPageDAO {
 				"DELETE FROM
 								user_buy_item_transaction
 						WHERE
-								item_transaction_id = AND user_master_id = ?"
+								item_transaction_id = AND user_master_id = ? "
 				PreparedStatement preparedStatement;
 				int result = 0;
 				try{
