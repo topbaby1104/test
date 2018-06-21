@@ -1,0 +1,48 @@
+
+
+
+
+
+header{
+    background-color:black;
+    width:100%;
+    height:30px;}
+
+ul li{
+    list-style:none;
+    float:left;
+    color:white;
+    padding-right:30px;}
+
+main{margin:0 auto;
+    margin-top:45px;}
+
+
+
+.b{
+    display:inline-block;
+    width:800px;
+    height:600px;
+    background-color:aqua;
+}
+.c{ display:inline-block;
+    width:300px;
+    height:600px;
+    background-color:green;
+}
+
+footer{
+    background-color:black;
+    width:100%;  
+    position:absolute;
+    bottom:0;
+    height:30px;}
+
+
+.aiu{
+    color:aliceblue;
+    text-align:center;
+
+    
+    
+}
